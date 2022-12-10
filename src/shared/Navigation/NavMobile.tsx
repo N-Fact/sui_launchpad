@@ -1,6 +1,6 @@
 import { Disclosure } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/solid";
-import { useWallet } from "@manahippo/aptos-wallet-adapter";
+import { useWallet } from "@suiet/wallet-kit";
 import WalletModal from 'components/modals/walletModal/WalletModal';
 import { NAVIGATION_DEMO_2 } from "data/navigation";
 import React, { useState } from "react";
@@ -119,7 +119,7 @@ const NavMobile: React.FC<NavMobileProps> = ({
     );
   };
 
-  const { connecting, select, connect, connected, account, network, ...rest } = useWallet();
+  const { connecting, select, connected, account, ...rest } = useWallet();
   const [showModal, setShowModal] = useState(false);
   function connectWallet() {
     setShowModal(true);

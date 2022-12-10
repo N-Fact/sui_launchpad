@@ -1,5 +1,4 @@
 import { useWallet } from "@suiet/wallet-kit";
-import { AptosClient, HexString } from "aptos";
 import StateProvider from "context/StateProvider";
 import { FC, useContext, useEffect, useState } from "react";
 import toast from "react-hot-toast";
@@ -67,28 +66,28 @@ const NftDetailCard2: FC<CardLarge2Props> = ({
   }
 
 
-  const NODE_URL = "https://testnet.aptoslabs.com";
-  async function getCounter() {
-    const client = new AptosClient(NODE_URL);
-    const itWorked: any = await client.getAccountResource(
-      new HexString(
-        project?.contract_address
-      ),
-      project?.contract_address + "::launcpad_mint::Counter"
-    );
-    // console.log(itWorked);
-    // console.log(itWorked.data.i)
-    setMintCount(itWorked.data.i);
-    setMintPercent(((itWorked.data.i / project?.total_supply) * 100))
-    if (itWorked.data.i == project?.total_supply) {
-      setMintEnded(true);
-    }
-  }
+  // const NODE_URL = "https://testnet.aptoslabs.com";
+  // async function getCounter() {
+  //   const client = new AptosClient(NODE_URL);
+  //   const itWorked: any = await client.getAccountResource(
+  //     new HexString(
+  //       project?.contract_address
+  //     ),
+  //     project?.contract_address + "::launcpad_mint::Counter"
+  //   );
+  //   // console.log(itWorked);
+  //   // console.log(itWorked.data.i)
+  //   setMintCount(itWorked.data.i);
+  //   setMintPercent(((itWorked.data.i / project?.total_supply) * 100))
+  //   if (itWorked.data.i == project?.total_supply) {
+  //     setMintEnded(true);
+  //   }
+  // }
 
   useEffect(() => {
 
     if (project?.contract_address) {
-      getCounter();
+      // getCounter();
     }
 
   }, [project]);
@@ -97,7 +96,7 @@ const NftDetailCard2: FC<CardLarge2Props> = ({
 
     const interval = setInterval(() => {
       if (project?.contract_address) {
-        getCounter();
+        // getCounter();
 
       }
 
@@ -225,12 +224,12 @@ const NftDetailCard2: FC<CardLarge2Props> = ({
                         return (
                           <div key={index} className="rounded-2xl gap-6 flex flex-col shadow-md border border-neutral-50 dark:border-neutral-800 hover:bg-zinc-900 duration-500 p-2 lg:p-3 items-start">
                             <div className="flex w-full">
-                              <span className="text-xs shadow-md text-white rounded-full bg-slate-800 py-1 px-2 capitalize">
+                              {/* <span className="text-xs shadow-md text-white rounded-full bg-slate-800 py-1 px-2 capitalize">
                                 {round.name}
-                              </span>
-                              <span className="text-xs shadow-md text-white rounded-full bg-slate-800 py-1 px-2 ml-2">
+                              </span> */}
+                              {/* <span className="text-xs shadow-md text-white rounded-full bg-slate-800 py-1 px-2 ml-2">
                                 Items : {round.item_count}
-                              </span>
+                              </span> */}
                               <span className="text-green-400 ml-auto">
                                 LIVE
                               </span>
@@ -250,15 +249,15 @@ const NftDetailCard2: FC<CardLarge2Props> = ({
                         return (
                           <div key={index} className="rounded-2xl gap-6 flex flex-col shadow-md border border-neutral-50 dark:border-neutral-800 hover:bg-zinc-900 duration-500 p-2 lg:p-3 items-start">
                             <div className="flex w-full">
-                              <span className="text-xs text-white rounded-full shadow-md bg-slate-800 py-1 px-2 capitalize">
+                              {/* <span className="text-xs text-white rounded-full shadow-md bg-slate-800 py-1 px-2 capitalize">
                                 {round.name}
                               </span>
                               <span className="text-xs text-white rounded-full shadow-md bg-slate-800 py-1 px-2 ml-2">
                                 Items : {round.item_count}
-                              </span>
-                              {round.total_ended_supply > 0 ? <span className="text-xs text-white rounded-full shadow-md bg-slate-800 py-1 px-2 ml-2">
+                              </span> */}
+                              {/* {round.total_ended_supply > 0 ? <span className="text-xs text-white rounded-full shadow-md bg-slate-800 py-1 px-2 ml-2">
                                 Total minted : {round.total_ended_supply}
-                              </span> : ""}
+                              </span> : ""} */}
                               <span className="text-red-400  ml-auto ">
                                 ENDED
                               </span>
@@ -276,12 +275,12 @@ const NftDetailCard2: FC<CardLarge2Props> = ({
                       return (
                         <div key={index} className="rounded-2xl gap-6 flex flex-col shadow-md border border-neutral-50 dark:border-neutral-800 hover:bg-zinc-900 duration-500 p-2 lg:p-3 items-start">
                           <div className="flex w-full">
-                            <span className="text-xs shadow-md text-white rounded-full bg-slate-800 py-1 px-2 capitalize">
+                            {/* <span className="text-xs shadow-md text-white rounded-full bg-slate-800 py-1 px-2 capitalize">
                               {round.name}
                             </span>
                             <span className="text-xs shadow-md text-white rounded-full bg-slate-800 py-1 px-2 ml-2">
                               Items : {round.item_count}
-                            </span>
+                            </span> */}
                             <span className="text-yellow-200 ml-auto">
                               Not Started
                             </span>
@@ -298,10 +297,6 @@ const NftDetailCard2: FC<CardLarge2Props> = ({
                     }
                   })
                 }
-
-
-
-
 
               </div>
             </div>
