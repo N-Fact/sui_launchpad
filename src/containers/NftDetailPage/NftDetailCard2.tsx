@@ -164,7 +164,9 @@ const NftDetailCard2: FC<CardLarge2Props> = ({
 
             </div>
           </div>
+
           <div className="mt-5 md:mt-0 md:ml-8 xl:ml-14">
+
             <div className="max-w-screen-sm">
               <h2 className="inline-block text-2xl sm:text-3xl lg:text-5xl font-semibold mb-2">
                 {project?.title}
@@ -210,11 +212,13 @@ const NftDetailCard2: FC<CardLarge2Props> = ({
                             <span className="text-red-400  ml-auto ">
                               ENDED
                             </span>
+                            <div style={{ width: "150px" }}></div>
                           </div>
                           <div className="flex justify-between w-full items-end">
                             <span className="font-sm text-base rounded">
                               {round.mintbywallet} Mint per wallet <br /><b> Price: <span className="text-green-600">{round.price} $APT</span></b>
                             </span>
+                            <div style={{ width: "150px" }}></div>
                           </div>
                         </div>
                       )
@@ -238,6 +242,7 @@ const NftDetailCard2: FC<CardLarge2Props> = ({
                               <span className="font-sm text-base rounded">
                                 {round.mintbywallet} Mint per wallet <br /><b> Price: <span className="text-green-600">{round.price} $APT</span></b>
                               </span>
+                              <div style={{ width: "150px" }}></div>
                               <Button className="bg-blue-600 hover:bg-green-700 duration-500 font-semibold rounded-md space" sizeClass="px-6 py-2 " onClick={async () => {
                                 await sendMintTransaction();
                               }}  >MINT</Button>
@@ -266,6 +271,7 @@ const NftDetailCard2: FC<CardLarge2Props> = ({
                               <span className="font-sm text-base rounded">
                                 {round.mintbywallet} Mint per wallet <br /><b> Price: <span className="text-green-600">{round.price} $APT</span></b>
                               </span>
+                              <div style={{ width: "150px" }}></div>
                             </div>
                           </div>
                         )
