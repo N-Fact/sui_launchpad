@@ -190,7 +190,7 @@ const NftDetailCard2: FC<CardLarge2Props> = ({
                   </div>
                 </div>
                 <span className=" border-solid  border px-2 py-2 text-xs shadow-md dark:border-neutral-800 rounded-full flex items-center justify-center">
-                  TOTAL ITEMS : {project?.total_supply}
+                 {/* TOTAL ITEMS : {project?.total_supply} */}
                 </span>
               </div>
               <div className="mt-6 xl:mt-8 gap-4 flex flex-col">
@@ -218,7 +218,7 @@ const NftDetailCard2: FC<CardLarge2Props> = ({
                           </div>
                           <div className="flex justify-between w-full items-end">
                             <span className="font-sm text-base rounded">
-                              {round.mintbywallet} Mint per wallet <br /><b> Price: <span className="text-green-600">{round.price} $APT</span></b>
+                              {/*{round.mintbywallet} Mint per wallet   */}<br /><b> Price: <span className="text-green-600">{round.price} $SUI</span></b>
                             </span>
                             <div style={{ width: "150px" }}></div>
                           </div>
@@ -242,7 +242,8 @@ const NftDetailCard2: FC<CardLarge2Props> = ({
                             </div>
                             <div className="flex justify-between w-full items-end">
                               <span className="font-sm text-base rounded">
-                                {round.mintbywallet} Mint per wallet <br /><b> Price: <span className="text-green-600">{round.price} $APT</span></b>
+                                {/*{round.mintbywallet} Mint per wallet   */}<br /><b> Price: <span className="text-green-600">{round.price} $SUI</span></b>
+                                 
                               </span>
                               <div style={{ width: "150px" }}></div>
                               <Button className="bg-blue-600 hover:bg-green-700 duration-500 font-semibold rounded-md space" sizeClass="px-6 py-2 " onClick={async () => {
@@ -271,7 +272,7 @@ const NftDetailCard2: FC<CardLarge2Props> = ({
                             </div>
                             <div className="flex justify-between w-full items-end">
                               <span className="font-sm text-base rounded">
-                                {round.mintbywallet} Mint per wallet <br /><b> Price: <span className="text-green-600">{round.price} $APT</span></b>
+                                {/*{round.mintbywallet} Mint per wallet   */}<br /><b> Price: <span className="text-green-600">{round.price} $SUI</span></b>
                               </span>
                               <div style={{ width: "150px" }}></div>
                             </div>
@@ -295,7 +296,7 @@ const NftDetailCard2: FC<CardLarge2Props> = ({
                           </div>
                           <div className="flex justify-between w-full">
                             <span className="font-sm text-base rounded">
-                              {round.mintbywallet} Mint per wallet <br /><b> Price: <span className="text-green-600">{round.price} $APT</span></b>
+                              {/*{round.mintbywallet} Mint per wallet   */}<br /><b> Price: <span className="text-green-600">{round.price} $SUI</span></b>
                             </span>
                             <div style={{ width: "150px" }}></div>
                             <TimeCountDown eventDate={round.event_date} />
