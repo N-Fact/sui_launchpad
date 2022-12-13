@@ -35,7 +35,7 @@ const NftDetailCard2: FC<CardLarge2Props> = ({
             module: 'test_catapult',
             function: 'mint',
             typeArguments: [],
-            arguments: ["0x7402d3b349a0f2a25312ae72f6c36a8cbf942d37"],
+            arguments: [project?.contract_address],
             gasBudget: 10000,
           }
         }
@@ -85,7 +85,8 @@ const NftDetailCard2: FC<CardLarge2Props> = ({
   // }
 
   useEffect(() => {
-
+    console.log(project?.contract_address);
+    // console.log(project);
     if (project?.contract_address) {
       // getCounter();
     }
