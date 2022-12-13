@@ -27,6 +27,7 @@ const NftDetailCard2: FC<CardLarge2Props> = ({
   async function sendMintTransaction() {
     if (!wallet.connected) return
     try {
+
       const resData = await wallet.signAndExecuteTransaction({
         transaction: {
           kind: 'moveCall',
