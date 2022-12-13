@@ -32,11 +32,11 @@ const NftDetailCard2: FC<CardLarge2Props> = ({
         transaction: {
           kind: 'moveCall',
           data: {
-            packageObjectId: '0xa88f78df25dd7a7cb15823f90ae0281117eb9f19',
+            packageObjectId: project?.contract_address,
             module: 'test_catapult',
             function: 'mint',
             typeArguments: [],
-            arguments: [project?.contract_address],
+            arguments: [project?.resource_address],
             gasBudget: 10000,
           }
         }
