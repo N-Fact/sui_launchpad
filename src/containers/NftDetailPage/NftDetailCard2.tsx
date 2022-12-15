@@ -153,7 +153,7 @@ const NftDetailCard2: FC<CardLarge2Props> = ({
               <div className="mt-4">
                 <div className="flex ">
                   <span className="opacity-75 text-sm">Total minted</span>
-                  <span className=" text-sm text-white ml-auto mr-2 font-semibold">{mintPercent.toFixed(2)}%</span><span className="opacity-75 text-sm">({MintCount + "/" + project?.total_supply}) </span>
+                  <span className=" text-sm text-white ml-auto mr-2 font-semibold">{/* mintPercent.toFixed(2) %*/}</span><span className="opacity-75 text-sm">{MintCount} </span>
                 </div>
                 <div className="mt-1 w-full h-2 bg-red-400 bg-opacity-60 rounded-full ">
                   <div className="h-2 bg-red-400 rounded-full transition-all duration-1000" style={{ width: mintPercent + "%" }}></div>
