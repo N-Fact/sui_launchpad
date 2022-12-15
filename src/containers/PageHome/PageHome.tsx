@@ -1,9 +1,6 @@
 import axios from "axios";
-import DividerDwarf from "components/DividerDwarf";
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
-import SectionGridFeatureNFT from "./SectionGridFeatureNFT";
-import SectionGridFeatureNFTSold from "./SectionGridFeatureNFTSold";
 import SectionLargeSlider from "./SectionLargeSlider";
 const client = axios.create({
   baseURL: "https://suilaunchpad.novemyazilim.com/api/v1/eventActive"
@@ -52,17 +49,17 @@ function PageHome() {
           <SectionLargeSlider projects={highProjects} />
         </div>
       </div>
-      <DividerDwarf />
+      {/* <DividerDwarf /> */}
 
       <div className="container relative space-y-24 my-24 lg:space-y-32 lg:my-32">
         {/* SECTION */}
-        <SectionGridFeatureNFT projects={projects} title="Upcoming" />
+        {/* <SectionGridFeatureNFT projects={projects} title="Upcoming" /> */}
       </div>
-      <DividerDwarf />
-      <div className="container relative space-y-24 my-24 lg:space-y-32 lg:my-32">
-        {/* SECTION */}
-        <SectionGridFeatureNFTSold projects={endedProjects} title="Ended" />
-      </div>
+      {/* <DividerDwarf /> */}
+      {/* <div className="container relative space-y-24 my-24 lg:space-y-32 lg:my-32"> */}
+      {/* SECTION */}
+      {/* <SectionGridFeatureNFTSold projects={endedProjects} title="Ended" /> */}
+      {/* </div> */}
     </div>
   );
 }
