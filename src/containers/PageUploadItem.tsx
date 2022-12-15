@@ -1,15 +1,15 @@
-import Label from "components/Label/Label";
-import React, { FC, useState } from "react";
-import ButtonPrimary from "shared/Button/ButtonPrimary";
-import Input from "shared/Input/Input";
-import Textarea from "shared/Textarea/Textarea";
-import { Helmet } from "react-helmet";
-import FormItem from "components/FormItem";
 import { RadioGroup } from "@headlessui/react";
-import { nftsImgs } from "contains/fakeData";
+import FormItem from "components/FormItem";
+import Label from "components/Label/Label";
 import MySwitch from "components/MySwitch";
+import { nftsImgs } from "contains/fakeData";
+import { FC, useState } from "react";
+import { Helmet } from "react-helmet";
+import ButtonPrimary from "shared/Button/ButtonPrimary";
 import ButtonSecondary from "shared/Button/ButtonSecondary";
+import Input from "shared/Input/Input";
 import NcImage from "shared/NcImage/NcImage";
+import Textarea from "shared/Textarea/Textarea";
 
 export interface PageUploadItemProps {
   className?: string;
@@ -123,7 +123,7 @@ const PageUploadItem: FC<PageUploadItemProps> = ({ className = "" }) => {
             {/* ---- */}
             <FormItem
               label="External link"
-              desc="Ciscrypt will include a link to this URL on this item's detail page, so that users can click to learn more about it. You are welcome to link to your own webpage with more details."
+              desc="Catapult is SUI based NFT Launchpad will include a link to this URL on this item's detail page, so that users can click to learn more about it. You are welcome to link to your own webpage with more details."
             >
               <div className="flex">
                 <span className="inline-flex items-center px-3 rounded-l-2xl border border-r-0 border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 text-neutral-500 dark:text-neutral-400 text-sm">
@@ -165,16 +165,14 @@ const PageUploadItem: FC<PageUploadItemProps> = ({ className = "" }) => {
                       key={index}
                       value={plan}
                       className={({ active, checked }) =>
-                        `${
-                          active
-                            ? "ring-2 ring-offset-2 ring-offset-sky-300 ring-white ring-opacity-60"
-                            : ""
+                        `${active
+                          ? "ring-2 ring-offset-2 ring-offset-sky-300 ring-white ring-opacity-60"
+                          : ""
                         }
-                  ${
-                    checked
-                      ? "bg-teal-600 text-white"
-                      : "hover:bg-neutral-100 dark:hover:bg-neutral-800"
-                  }
+                  ${checked
+                          ? "bg-teal-600 text-white"
+                          : "hover:bg-neutral-100 dark:hover:bg-neutral-800"
+                        }
                     relative flex-shrink-0 w-44 rounded-xl border border-neutral-200 dark:border-neutral-700 px-6 py-5 cursor-pointer flex focus:outline-none `
                       }
                     >
@@ -201,9 +199,8 @@ const PageUploadItem: FC<PageUploadItemProps> = ({ className = "" }) => {
                                 </div>
                                 <RadioGroup.Label
                                   as="p"
-                                  className={`font-semibold mt-3  ${
-                                    checked ? "text-white" : ""
-                                  }`}
+                                  className={`font-semibold mt-3  ${checked ? "text-white" : ""
+                                    }`}
                                 >
                                   {plan.name}
                                 </RadioGroup.Label>

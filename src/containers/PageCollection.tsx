@@ -1,17 +1,17 @@
-import React, { FC } from "react";
-import { Helmet } from "react-helmet";
 import BackgroundSection from "components/BackgroundSection/BackgroundSection";
-import NcImage from "shared/NcImage/NcImage";
-import CardNFT from "components/CardNFT";
-import Pagination from "shared/Pagination/Pagination";
-import ButtonPrimary from "shared/Button/ButtonPrimary";
-import collectionBanner from "images/nfts/collectionBanner.png";
-import { nftsImgs } from "contains/fakeData";
-import NftMoreDropdown from "components/NftMoreDropdown";
 import ButtonDropDownShare from "components/ButtonDropDownShare";
-import TabFilters from "components/TabFilters";
-import SectionSliderCollections from "components/SectionSliderCollections";
+import CardNFT from "components/CardNFT";
+import NftMoreDropdown from "components/NftMoreDropdown";
 import SectionBecomeAnAuthor from "components/SectionBecomeAnAuthor/SectionBecomeAnAuthor";
+import SectionSliderCollections from "components/SectionSliderCollections";
+import TabFilters from "components/TabFilters";
+import { nftsImgs } from "contains/fakeData";
+import collectionBanner from "images/nfts/collectionBanner.png";
+import { FC } from "react";
+import { Helmet } from "react-helmet";
+import ButtonPrimary from "shared/Button/ButtonPrimary";
+import NcImage from "shared/NcImage/NcImage";
+import Pagination from "shared/Pagination/Pagination";
 
 export interface PageCollectionProps {
   className?: string;
@@ -24,7 +24,7 @@ const PageCollection: FC<PageCollectionProps> = ({ className = "" }) => {
       data-nc-id="PageCollection"
     >
       <Helmet>
-        <title>Collection || Ciscryp NFT Template</title>
+        <title>Catapult is SUI based NFT Launchpad</title>
       </Helmet>
 
       {/* HEADER */}

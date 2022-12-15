@@ -40,7 +40,7 @@ function PageHome() {
   return (
     <div className="nc-PageHome relative overflow-hidden">
       <Helmet>
-        <title>Ciscryp || NFT Marketplace Template</title>
+        <title>Catapult || Catapult is SUI based NFT Launchpad</title>
       </Helmet>
 
       {/* SECTION LAERGE SLIDER */}

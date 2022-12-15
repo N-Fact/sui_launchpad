@@ -1,10 +1,10 @@
+import BgGlassmorphism from "components/BgGlassmorphism/BgGlassmorphism";
+import SectionSubscribe2 from "components/SectionSubscribe2/SectionSubscribe2";
 import React from "react";
 import { Helmet } from "react-helmet";
 import SectionAds from "./SectionAds";
-import SectionSubscribe2 from "components/SectionSubscribe2/SectionSubscribe2";
-import SectionMagazine5 from "./SectionMagazine5";
 import SectionLatestPosts from "./SectionLatestPosts";
-import BgGlassmorphism from "components/BgGlassmorphism/BgGlassmorphism";
+import SectionMagazine5 from "./SectionMagazine5";
 
 // DEMO DATA
 
@@ -12,7 +12,7 @@ const BlogPage: React.FC = () => {
   return (
     <div className="nc-BlogPage overflow-hidden relative">
       <Helmet>
-        <title>Blog || Ciscryp React Template</title>
+        <title>Blog || Catapult is SUI based NFT Launchpad</title>
       </Helmet>
 
       {/* ======== BG GLASS ======== */}

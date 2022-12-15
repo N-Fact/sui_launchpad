@@ -1,22 +1,22 @@
-import React, { FC, Fragment, useState } from "react";
-import { Helmet } from "react-helmet";
-import BackgroundSection from "components/BackgroundSection/BackgroundSection";
-import NcImage from "shared/NcImage/NcImage";
-import CardNFT from "components/CardNFT";
-import Pagination from "shared/Pagination/Pagination";
-import ButtonPrimary from "shared/Button/ButtonPrimary";
-import authorBanner from "images/nfts/authorBanner.png";
-import { nftsImgs } from "contains/fakeData";
-import NftMoreDropdown from "components/NftMoreDropdown";
-import ButtonDropDownShare from "components/ButtonDropDownShare";
-import SectionBecomeAnAuthor from "components/SectionBecomeAnAuthor/SectionBecomeAnAuthor";
-import SocialsList from "shared/SocialsList/SocialsList";
-import FollowButton from "components/FollowButton";
-import VerifyIcon from "components/VerifyIcon";
 import { Tab } from "@headlessui/react";
-import CardAuthorBox3 from "components/CardAuthorBox3/CardAuthorBox3";
 import ArchiveFilterListBox from "components/ArchiveFilterListBox";
+import BackgroundSection from "components/BackgroundSection/BackgroundSection";
+import ButtonDropDownShare from "components/ButtonDropDownShare";
+import CardAuthorBox3 from "components/CardAuthorBox3/CardAuthorBox3";
+import CardNFT from "components/CardNFT";
+import FollowButton from "components/FollowButton";
+import NftMoreDropdown from "components/NftMoreDropdown";
+import SectionBecomeAnAuthor from "components/SectionBecomeAnAuthor/SectionBecomeAnAuthor";
 import SectionGridAuthorBox from "components/SectionGridAuthorBox/SectionGridAuthorBox";
+import VerifyIcon from "components/VerifyIcon";
+import { nftsImgs } from "contains/fakeData";
+import authorBanner from "images/nfts/authorBanner.png";
+import { FC, Fragment, useState } from "react";
+import { Helmet } from "react-helmet";
+import ButtonPrimary from "shared/Button/ButtonPrimary";
+import NcImage from "shared/NcImage/NcImage";
+import Pagination from "shared/Pagination/Pagination";
+import SocialsList from "shared/SocialsList/SocialsList";
 
 export interface AuthorPageProps {
   className?: string;
@@ -34,7 +34,7 @@ const AuthorPage: FC<AuthorPageProps> = ({ className = "" }) => {
   return (
     <div className={`nc-AuthorPage  ${className}`} data-nc-id="AuthorPage">
       <Helmet>
-        <title>Creator || Ciscryp NFT Template</title>
+        <title>Catapult || Catapult is SUI based NFT Launchpad</title>
       </Helmet>
 
       {/* HEADER */}
@@ -130,11 +130,10 @@ const AuthorPage: FC<AuthorPageProps> = ({ className = "" }) => {
                   <Tab key={item} as={Fragment}>
                     {({ selected }) => (
                       <button
-                        className={`flex-shrink-0 block font-medium px-4 py-2 text-sm sm:px-6 sm:py-2.5 capitalize rounded-full focus:outline-none ${
-                          selected
+                        className={`flex-shrink-0 block font-medium px-4 py-2 text-sm sm:px-6 sm:py-2.5 capitalize rounded-full focus:outline-none ${selected
                             ? "bg-neutral-900 dark:bg-neutral-100 text-neutral-50 dark:text-neutral-900"
                             : "text-neutral-500 dark:text-neutral-400 dark:hover:text-neutral-100 hover:text-neutral-900 hover:bg-neutral-100/70 dark:hover:bg-neutral-800"
-                        } `}
+                          } `}
                       >
                         {item}
                       </button>

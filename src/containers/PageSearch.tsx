@@ -1,14 +1,14 @@
-import React, { FC } from "react";
-import { Helmet } from "react-helmet";
 import BackgroundSection from "components/BackgroundSection/BackgroundSection";
-import Pagination from "shared/Pagination/Pagination";
-import ButtonPrimary from "shared/Button/ButtonPrimary";
-import SectionSliderCollections from "components/SectionSliderCollections";
-import SectionBecomeAnAuthor from "components/SectionBecomeAnAuthor/SectionBecomeAnAuthor";
-import HeaderFilterSearchPage from "components/HeaderFilterSearchPage";
-import Input from "shared/Input/Input";
-import ButtonCircle from "shared/Button/ButtonCircle";
 import CardNFT from "components/CardNFT";
+import HeaderFilterSearchPage from "components/HeaderFilterSearchPage";
+import SectionBecomeAnAuthor from "components/SectionBecomeAnAuthor/SectionBecomeAnAuthor";
+import SectionSliderCollections from "components/SectionSliderCollections";
+import { FC } from "react";
+import { Helmet } from "react-helmet";
+import ButtonCircle from "shared/Button/ButtonCircle";
+import ButtonPrimary from "shared/Button/ButtonPrimary";
+import Input from "shared/Input/Input";
+import Pagination from "shared/Pagination/Pagination";
 
 export interface PageSearchProps {
   className?: string;
@@ -18,7 +18,7 @@ const PageSearch: FC<PageSearchProps> = ({ className = "" }) => {
   return (
     <div className={`nc-PageSearch  ${className}`} data-nc-id="PageSearch">
       <Helmet>
-        <title>Search || Ciscryp NFT Template</title>
+        <title>Catapult is SUI based NFT Launchpad</title>
       </Helmet>
 
       <div

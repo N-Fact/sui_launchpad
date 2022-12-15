@@ -1,4 +1,5 @@
-import React from "react";
+import { _getImgRd, _getPersonNameRd, _getTitleRd } from "contains/fakeData";
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import Avatar from "shared/Avatar/Avatar";
 import Badge from "shared/Badge/Badge";
@@ -8,8 +9,6 @@ import Comment from "shared/Comment/Comment";
 import NcImage from "shared/NcImage/NcImage";
 import SocialsList from "shared/SocialsList/SocialsList";
 import Textarea from "shared/Textarea/Textarea";
-import { Helmet } from "react-helmet";
-import { _getImgRd, _getPersonNameRd, _getTitleRd } from "contains/fakeData";
 
 const BlogSingle = () => {
   const renderHeader = () => {
@@ -301,7 +300,7 @@ const BlogSingle = () => {
   return (
     <div className="nc-PageSingle pt-8 lg:pt-16 ">
       <Helmet>
-        <title>Single Blog || Ciscryp React Template</title>
+        <title>Catapult is SUI based NFT Launchpad</title>
       </Helmet>
       {renderHeader()}
       <NcImage
