@@ -67,29 +67,48 @@ const NftDetailCard2: FC<CardLarge2Props> = ({
   }
 
 
-  // const NODE_URL = "https://testnet.aptoslabs.com";
-  // async function getCounter() {
-  //   const client = new AptosClient(NODE_URL);
-  //   const itWorked: any = await client.getAccountResource(
-  //     new HexString(
-  //       project?.contract_address
-  //     ),
-  //     project?.contract_address + "::launcpad_mint::Counter"
-  //   );
-  //   // console.log(itWorked);
-  //   // console.log(itWorked.data.i)
-  //   setMintCount(itWorked.data.i);
-  //   setMintPercent(((itWorked.data.i / project?.total_supply) * 100))
-  //   if (itWorked.data.i == project?.total_supply) {
-  //     setMintEnded(true);
-  //   }
-  // }
+  async function getCounter() {
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+    var raw = JSON.stringify({
+      "method": "sui_getObject",
+      "jsonrpc": "2.0",
+      "params": [
+        project?.resource_address
+      ],
+      "id": "bd415700-a034-4904-8901-cc634f0f364a"
+    });
+
+    var requestOptions = {
+      method: 'POST',
+      headers: myHeaders,
+      body: raw,
+      redirect: 'follow'
+    };
+
+    await fetch("https://fullnode.devnet.sui.io/", requestOptions as any)
+      .then(response => response.text())
+      .then(result => {
+        let data = JSON.parse(result);
+        let counter = data.result.details.data.fields.value;
+        setMintCount(counter);
+        setMintPercent(((counter / project?.total_supply) * 100))
+        if (counter == project?.total_supply) {
+          setMintEnded(true);
+        }
+      }
+      )
+      .catch(error => console.log('error', error));
+  }
+
+
+
 
   useEffect(() => {
     console.log(project?.contract_address);
     // console.log(project);
     if (project?.contract_address) {
-      // getCounter();
+      getCounter();
     }
 
   }, [project]);
@@ -98,7 +117,7 @@ const NftDetailCard2: FC<CardLarge2Props> = ({
 
     const interval = setInterval(() => {
       if (project?.contract_address) {
-        // getCounter();
+        getCounter();
 
       }
 
@@ -190,7 +209,7 @@ const NftDetailCard2: FC<CardLarge2Props> = ({
                   </div>
                 </div>
                 <span className=" border-solid  border px-2 py-2 text-xs shadow-md dark:border-neutral-800 rounded-full flex items-center justify-center">
-                 {/* TOTAL ITEMS : {project?.total_supply} */}
+                  {/* TOTAL ITEMS : {project?.total_supply} */}
                 </span>
               </div>
               <div className="mt-6 xl:mt-8 gap-4 flex flex-col">
@@ -243,7 +262,7 @@ const NftDetailCard2: FC<CardLarge2Props> = ({
                             <div className="flex justify-between w-full items-end">
                               <span className="font-sm text-base rounded">
                                 {/*{round.mintbywallet} Mint per wallet   */}<br /><b> Price: <span className="text-green-600">{round.price} $SUI</span></b>
-                                 
+
                               </span>
                               <div style={{ width: "150px" }}></div>
                               <Button className="bg-blue-600 hover:bg-green-700 duration-500 font-semibold rounded-md space" sizeClass="px-6 py-2 " onClick={async () => {
