@@ -20,7 +20,7 @@ const SectionSubscribe2: FC<SectionSubscribe2Props> = ({ className = "" }) => {
         <h2 className="font-semibold text-4xl">Never miss a drop!</h2>
         <span className="block mt-5 text-neutral-500 dark:text-neutral-400">
           Subcribe to our super-exclusive drop list and be the first to know
-          abour upcoming drops
+          about upcoming drops
         </span>
         <ul className="space-y-4 mt-10">
           <li className="flex items-center space-x-4">

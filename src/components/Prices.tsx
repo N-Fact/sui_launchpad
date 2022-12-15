@@ -25,7 +25,7 @@ const Prices: FC<PricesProps> = ({
         >
           {labelText}
         </span>
-        <span className=" text-green-500 !leading-none">{price} APT</span>
+        <span className=" text-blue-500 !leading-none">{price} SUI</span>
       </div>
     </div>
   );
