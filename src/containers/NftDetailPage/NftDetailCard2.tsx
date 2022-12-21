@@ -25,35 +25,47 @@ const NftDetailCard2: FC<CardLarge2Props> = ({
   const { imageUrl } = useContext(StateProvider);
   const wallet = useWallet();
   async function sendMintTransaction() {
-    if (!wallet.connected) return
-    try {
+    if (wallet.connected) {
+      try {
 
-      const resData = await wallet.signAndExecuteTransaction({
-        transaction: {
-          kind: 'moveCall',
-          data: {
-            packageObjectId: project?.contract_address,
-            module: 'test_catapult',
-            function: 'mint',
-            typeArguments: [],
-            arguments: [project?.resource_address],
-            gasBudget: 10000,
+        const resData = await wallet.signAndExecuteTransaction({
+          transaction: {
+            kind: 'moveCall',
+            data: {
+              packageObjectId: project?.contract_address,
+              module: 'test_catapult',
+              function: 'mint',
+              typeArguments: [],
+              arguments: [project?.resource_address],
+              gasBudget: 10000,
+            }
           }
-        }
-      });
-      toast.success("Nft minted successfully!",
-        {
-          duration: 3000,
-          style: {
-            borderRadius: '10px',
-            background: '#333',
-            color: '#fff',
-          },
-        }
-      );
+        });
+        toast.success("Nft minted successfully!",
+          {
+            duration: 3000,
+            style: {
+              borderRadius: '10px',
+              background: '#333',
+              color: '#fff',
+            },
+          }
+        );
 
-    } catch (e) {
-      toast.error("Nft mint failed",
+      } catch (e) {
+        toast.error("Nft mint failed",
+          {
+            duration: 3000,
+            style: {
+              borderRadius: '10px',
+              background: '#333',
+              color: '#fff',
+            },
+          }
+        );
+      }
+    } else {
+      toast.error("Please connect your wallet",
         {
           duration: 3000,
           style: {
@@ -64,6 +76,7 @@ const NftDetailCard2: FC<CardLarge2Props> = ({
         }
       );
     }
+
   }
 
 
@@ -163,19 +176,19 @@ const NftDetailCard2: FC<CardLarge2Props> = ({
             <div className="mt-4 flex items-center sm:justify-center space-x-3">
               <div className="flex space-x-1.5 text-neutral-700 dark:text-neutral-300">
                 <a target="_blank"
-                  href={project?.user?.website}
+                  href={project?.website}
                   className="w-8 h-8 md:w-10 md:h-10 flex items-center  justify-center rounded-full bg-neutral-100 hover:bg-neutral-200 dark:hover:bg-neutral-700 dark:bg-neutral-800 cursor-pointer"
                 >
                   <i className="las la-globe text-base sm:text-xl"></i>
                 </a>
                 <a target="_blank"
-                  href={project?.user?.discord}
+                  href={project?.discord}
                   className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-neutral-100 hover:bg-neutral-200 dark:hover:bg-neutral-700 dark:bg-neutral-800 cursor-pointer"
                 >
                   <i className="text-base sm:text-xl lab la-discord"></i>
                 </a>
                 <a target="_blank"
-                  href={project?.user?.twitter}
+                  href={project?.twitter}
                   className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-neutral-100 hover:bg-neutral-200 dark:hover:bg-neutral-700 dark:bg-neutral-800 cursor-pointer"
                 >
 

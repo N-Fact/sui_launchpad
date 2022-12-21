@@ -23,6 +23,7 @@ const CardLarge2: FC<CardLarge2Props> = ({
   projectLength = 0,
 }) => {
   const { imageUrl } = useContext(StateProvider);
+
   return (
     <div
       className={`nc-CardLarge2 nc-CardLarge2--hasAnimation  ${className}`}
@@ -43,19 +44,19 @@ const CardLarge2: FC<CardLarge2Props> = ({
             <div className="mt-4 flex items-center justify-center space-x-3 ">
               <div className="flex space-x-1.5 text-neutral-700 dark:text-neutral-300">
                 <a
-                  href={project?.user?.website}
+                  href={project?.website}
                   className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-neutral-100 hover:bg-neutral-200 dark:hover:bg-neutral-700 dark:bg-neutral-800 cursor-pointer"
                 >
                   <i className="las la-globe text-base sm:text-xl"></i>
                 </a>
                 <a
-                  href={project?.user?.discord}
+                  href={project?.discord}
                   className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-neutral-100 hover:bg-neutral-200 dark:hover:bg-neutral-700 dark:bg-neutral-800 cursor-pointer"
                 >
                   <i className="text-base sm:text-xl lab la-discord"></i>
                 </a>
                 <a
-                  href={project?.user?.twitter}
+                  href={project?.twitter}
                   className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-neutral-100 hover:bg-neutral-200 dark:hover:bg-neutral-700 dark:bg-neutral-800 cursor-pointer"
                 >
 

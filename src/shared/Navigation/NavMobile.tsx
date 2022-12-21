@@ -1,15 +1,14 @@
 import { Disclosure } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/solid";
-import { useWallet } from "@suiet/wallet-kit";
-import WalletModal from 'components/modals/walletModal/WalletModal';
+import { ConnectButton, useWallet } from "@suiet/wallet-kit";
 import { NAVIGATION_DEMO_2 } from "data/navigation";
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import ButtonClose from "shared/ButtonClose/ButtonClose";
 import Logo from "shared/Logo/Logo";
-import NcModal from "shared/NcModal/NcModal";
 import SocialsList from "shared/SocialsList/SocialsList";
 import { NavItemType } from "./NavigationItem";
+
 
 
 
@@ -150,19 +149,10 @@ const NavMobile: React.FC<NavMobileProps> = ({
         {data.map(_renderItem)}
       </ul>
       <div className="flex items-center justify-between py-6 px-5 space-x-2">
-        <button className='connect-wallet-btn'
-          onClick={connectWallet}
-        >
+        <ConnectButton className='connect-wallet-btn'>
           Connect Wallet
-        </button>
-        <NcModal
-          renderTrigger={() => null}
-          isOpenProp={showModal}
-          renderContent={WalletModal}
-          contentExtraClass="max-w-lg"
-          onCloseModal={() => setShowModal(false)}
-          modalTitle="Connect Wallet"
-        />
+        </ConnectButton>
+
       </div>
     </div>
   );
