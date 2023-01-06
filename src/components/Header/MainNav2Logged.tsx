@@ -21,7 +21,9 @@ const MainNav2Logged: FC<MainNav2LoggedProps> = () => {
         </div>
         <div className="flex-shrink-0 flex items-center justify-end text-neutral-700 dark:text-neutral-100 space-x-1">
           <div className="hidden items-center xl:flex space-x-2">
-            <a className="inline-flex items-center text-sm xl:text-base py-2 px-4 xl:px-5 rounded-full hover:text-neutral-900 hover:bg-neutral-100 dark:hover:bg-neutral-800 dark:hover:text-neutral-200 font-normal text-neutral-700 dark:text-neutral-300" href="https://twitter.com/home">
+            <a className="inline-flex items-center text-sm xl:text-base py-2 px-4 xl:px-5 rounded-full hover:text-neutral-900 hover:bg-neutral-100 dark:hover:bg-neutral-800 dark:hover:text-neutral-200 font-normal text-neutral-700 dark:text-neutral-300" 
+            target="_blank"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSeZvibQHScbQ5ZYFyVEySM9s_AnzOp80pdStjIZF-ept-73UQ/viewform">
               Apply For Launchpad
             </a>
             <div className="hidden sm:block h-6 border-l border-neutral-300 dark:border-neutral-6000"></div>
@@ -33,7 +35,7 @@ const MainNav2Logged: FC<MainNav2LoggedProps> = () => {
             <AvatarDropdown user={user} />
           </div>
           <div className="flex items-center space-x-3 xl:hidden">
-            <NotifyDropdown />
+            {/* <NotifyDropdown /> */}
             <AvatarDropdown user={user} />
           </div>
         </div>
