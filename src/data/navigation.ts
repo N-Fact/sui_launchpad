@@ -9,8 +9,8 @@ const otherPageChildMenus2: NavItemType[] = [
   },
   {
     id: ncNanoId(),
-    href: "/home2",
-    name: "Home Demo 2",
+    href: "/bazaar",
+    name: "Bazaar",
   },
   {
     id: ncNanoId(),

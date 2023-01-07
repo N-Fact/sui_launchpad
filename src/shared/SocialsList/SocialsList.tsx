@@ -11,9 +11,9 @@ export interface SocialsListProps {
 }
 
 const socialsDemo: SocialType[] = [
-  { name: "Twitter", icon: twitter, href: "#" },
-  { name: "Discord", icon: discord, href: "#" },
-  { name: "Medium", icon: medium, href: "#" },
+  { name: "Twitter", icon: twitter, href: "https://twitter.com/DwarfKnightsDAO" },
+  { name: "Discord", icon: discord, href: "https://discord.gg/m8vgCfeDfG" },
+  { name: "Medium", icon: medium, href: "https://medium.com/@dwarfknights" },
 ];
 
 const SocialsList: FC<SocialsListProps> = ({

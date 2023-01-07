@@ -4,7 +4,7 @@ export interface LocationStates {
   "/"?: {};
   "*"?: {};
   "/#"?: {};
-  "/home2"?: {};
+  "/bazaar"?: {};
   "/home3"?: {};
   "/nft-detail/:slug"?: {};
   "/page-collection"?: {};

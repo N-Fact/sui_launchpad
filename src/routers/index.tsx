@@ -4,6 +4,7 @@ import AccountPage from "containers/AccountPage/AccountPage";
 import NftDetailPage from "containers/NftDetailPage/NftDetailPages";
 import Page404 from "containers/Page404/Page404";
 import PageHome from "containers/PageHome/PageHome";
+import PageHome2 from "containers/PageHome/PageHome2";
 import SiteHeader from "containers/SiteHeader";
 import StateProvider from "context/StateProvider";
 import { useContext, useEffect } from "react";
@@ -19,7 +20,7 @@ export const pages: Page[] = [
   { path: "/#", component: PageHome },
   { path: "/nft-detail/:slug", component: NftDetailPage },
   { path: "/account", component: AccountPage },
-  // { path: "/home3", component: PageHome2 },
+  { path: "/bazaar", component: PageHome2 },
   // { path: "/home-header-2", component: PageHome },
   // { path: "/page-collection", component: PageCollection },
   // { path: "/page-search", component: PageSearch },
@@ -91,7 +92,7 @@ const MyRoutes = () => {
       basename={process.env.NODE_ENV === "production" ? "" : ""}
     >
       <ScrollToTop />
-      <SiteHeader connected={connected} />
+      <SiteHeader connected={connected}/>
       <Routes>
         {pages.map(({ component, path }) => {
           const Component = component;
