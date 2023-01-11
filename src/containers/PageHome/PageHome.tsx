@@ -44,7 +44,7 @@ function PageHome() {
       </Helmet>
 
       {/* SECTION LAERGE SLIDER */}
-      <div className="py-20 lg:py-32">
+      <div className="py-20 lg:py-20">
         <div className="container">
           <SectionLargeSlider projects={highProjects} />
         </div>

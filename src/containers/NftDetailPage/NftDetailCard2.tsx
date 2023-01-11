@@ -156,7 +156,7 @@ const NftDetailCard2: FC<CardLarge2Props> = ({
     >
 
       {/* HEADER */}
-      <div className="w-full">
+      <div className="md:w-10/12">
         <div className=" bg-white dark:bg-neutral-900 dark:border dark:border-neutral-700 p-5 lg:p-8 rounded-[15px] shadow-xl flex flex-col md:flex-row lg:items-center">
           <div className="flex flex-grow flex-col sm:flex-row md:block sm:items-start sm:justify-between">
             <div className="">
@@ -205,7 +205,7 @@ const NftDetailCard2: FC<CardLarge2Props> = ({
               <h2 className="inline-block text-2xl sm:text-3xl lg:text-5xl font-semibold mb-2">
                 {project?.title}
               </h2>
-              <p className=" text-base mb-6">
+              <p className=" text-base mb-6 max-w-md">
                 {project?.description}
               </p>
               {/* AUTHOR AND COLLECTION */}
